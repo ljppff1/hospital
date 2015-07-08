@@ -1,0 +1,303 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calculator" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/icon_redground"
+        android:padding="@dimen/top_padding" >
+
+        <TextView
+            android:id="@+id/tv_calculator_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="捐血日期計算器"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="7dp" >
+
+        <RadioButton
+            android:id="@+id/radio_calculator_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="18歲或以上男性" />
+
+        <RadioButton
+            android:id="@+id/radio_calculator_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18歲或以上女性" />
+
+        <RadioButton
+            android:id="@+id/radio_calculator_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16/17歲人士" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/radioGroup_year"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/rela_padding" >
+
+            <TextView
+                android:id="@+id/tv_calculator_predate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上次捐血日期:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/rela_padding" >
+
+            <Spinner
+                        android:id="@+id/ spinner_day"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        />
+
+            <Spinner
+                android:id="@+id/spinner_month"
+                android:layout_width="110dp"
+                        android:layout_height="50dp"
+                android:layout_alignTop="@+id/ spinner_day"
+                android:layout_marginLeft="4dp"
+                 android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ spinner_day" />
+
+            <Spinner
+                android:id="@+id/spinner_year"
+                android:layout_width="105dp"
+                android:layout_height="50dp"
+                android:layout_alignTop="@+id/spinner_month"
+                android:layout_marginLeft="5dp"
+                  android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/spinner_month" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/rela_padding" >
+
+            <TextView
+                android:id="@+id/tv_calculator_pretype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="上次捐血類型:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <RadioGroup
+                android:id="@+id/radioGroup_pres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_calculator_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="全血" />
+
+                <RadioButton
+                    android:id="@+id/radio_calculator_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="成份血" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/rela_padding" >
+
+            <TextView
+                android:id="@+id/tv_calculator_nexttype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="下次捐血類型:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <RadioGroup
+                android:id="@+id/radioGroup_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_calculator_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="全血" />
+
+                <RadioButton
+                    android:id="@+id/radio_calculator_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="成份血" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape_greyline" >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/rela_padding" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/btn_calculator_calculator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:background="@drawable/shape_red"
+                        android:text="計算"
+                        android:onClick="btn_calculator"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+                 <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/btn_calculator_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:textColor="@color/white"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="btn_clear"
+                        android:background="@drawable/shape_red"
+                        android:text="清除" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/rela_padding" >
+<TextView
+                android:id="@+id/tv_calcutor_fit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="最快合資格下次捐血日期:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/rela_padding" >
+
+            <TextView
+                android:id="@+id/tv_calculator1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/shape_red"
+                android:text="   "
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_calculator3"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="6dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_calculator2"
+                android:background="@drawable/shape_red"
+                android:text="   "
+                android:gravity="center"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_calculator2"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/tv_calculator1"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_red"
+                android:layout_marginLeft="10dp"
+                android:text="  "
+                android:gravity="center"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

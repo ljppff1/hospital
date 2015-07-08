@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">10dp</dimen>
+    <dimen name="activity_vertical_margin">10dp</dimen>
+    <color name="white">#ffffff</color>
+    <color name="special">#339966</color>
+    <dimen name="style_height">25dp</dimen>
+    <dimen name="style_width">20dp</dimen>
+    <dimen name="menu_width">65dp</dimen>
+     <dimen name="menu_height">70dp</dimen>
+     <dimen name="menu_padding">5dp</dimen>
+     <dimen name="lina_paddingtop_bottom">3dp</dimen>
+     <dimen name="rela_padding">5dp</dimen>
+     <dimen name="top_padding">5dp</dimen>
+
+</resources>
